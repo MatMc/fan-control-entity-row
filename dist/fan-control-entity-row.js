@@ -83,7 +83,7 @@ class CustomFanRow extends Polymer.Element {
 	    customIsOffColor: '#f44c09',
 	    customIsOnLowColor: '#43A047',
 	    customIsOnMedColor: '#43A047',
-	    customIsOnHiColor: '#43A047',
+	    customIsOnHighColor: '#43A047',
 	    customIsOffSpdColor: '#759aaa',
             ...config
         };
@@ -96,7 +96,7 @@ class CustomFanRow extends Polymer.Element {
 	const custTheme = config.customTheme;
 	const custOnLowClr = config.customIsOnLowColor;
 	const custOnMedClr = config.customIsOnMedColor;
-	const custOnHiClr = config.customIsOnHiColor;
+	const custOnHighClr = config.customIsOnHighColor;
 	const custOffSpdClr = config.customIsOffSpdColor;
 	const custOffClr = config.customIsOffColor;
 		
@@ -126,7 +126,7 @@ class CustomFanRow extends Polymer.Element {
 		
         let lowcolor;
 	let medcolor;
-	let hicolor;
+	let highcolor;
 	let offcolor;
 				
 	if (custTheme) {
@@ -144,9 +144,9 @@ class CustomFanRow extends Polymer.Element {
 		}
 		
 		if (high == 'on') {
-			hicolor = 'background-color:'  + custOnHiClr;
+			highcolor = 'background-color:'  + custOnHighClr;
 		} else {
-			hicolor = 'background-color:' + custOffSpdClr;
+			highcolor = 'background-color:' + custOffSpdClr;
 		}
 		
 		if (offstate == 'on') {
@@ -170,9 +170,9 @@ class CustomFanRow extends Polymer.Element {
 		}
 		
 		if (high == 'on') {
-			hicolor = 'background-color: var(--paper-toggle-button-checked-button-color)';
+			highcolor = 'background-color: var(--paper-toggle-button-checked-button-color)';
 		} else {
-			hicolor = 'background-color: var(--paper-toggle-button-unchecked-button-color)';
+			highcolor = 'background-color: var(--paper-toggle-button-unchecked-button-color)';
 		}
 		
 		if (offstate == 'on') {
@@ -191,7 +191,7 @@ class CustomFanRow extends Polymer.Element {
 		_isOnHigh: high === 'on',
 		_lowOnColor: lowcolor,
 		_medOnColor: medcolor,
-		_highOnColor: hicolor,
+		_highOnColor: highcolor,
 		_offColor: offcolor,
 	});
     }
